@@ -8,15 +8,21 @@ public class TriggerTractorBeam : MonoBehaviour
     [SerializeField] private AudioSource calmMusic;
     [SerializeField] private AudioSource intenseMusic;
     [SerializeField] private Light secondLight;
+    [SerializeField] private GameObject worldObject;
     // Start is called before the first frame update
     void Start()
     {
         
     }
 
+    public void RotateWorld(InputAction.CallbackContext context)
+    {
+        var newMovement = context.ReadValue<Vector2>();
+        worldObject.transform.Rotate(new Vector3(0,0,newMovement.x));
+    }
+
     public void Fire(InputAction.CallbackContext context)
     {
-        Debug.Log("GOT SOMETHING: ");
         var newVal = context.ReadValue<float>();
 
         calmMusic.volume = newVal == 1 ? 0 : 1;
