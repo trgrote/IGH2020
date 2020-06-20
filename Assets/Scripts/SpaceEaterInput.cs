@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class GalaxyPlayerInputController : MonoBehaviour
+[RequireComponent(typeof(SpaceEaterMovement))]
+public class SpaceEaterInput : MonoBehaviour
 {
     Vector3 _direction = Vector3.zero;
     float _speed = 5f;
