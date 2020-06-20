@@ -17,6 +17,9 @@ public class Orbit : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        rotateRigidBodyAroundPointBy(GetComponent<Rigidbody>(), _origin.position, Vector3.up, _speed * Time.fixedDeltaTime);
+        if (_origin)
+        {
+            rotateRigidBodyAroundPointBy(GetComponent<Rigidbody>(), _origin.position, Vector3.up, _speed * Time.fixedDeltaTime);
+        }
     }
 }
