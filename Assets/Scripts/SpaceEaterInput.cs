@@ -4,10 +4,12 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(SpaceEaterMovement))]
+[RequireComponent(typeof(Animator))]
 public class SpaceEaterInput : MonoBehaviour
 {
     Vector3 _direction = Vector3.zero;
-    float _speed = 5f;
+
+    [SerializeField] float _speed = 5f;
 
     // When there's an input event, that means the input value has changed.
     // Continious dispatch doesn't happen, so we need to store the input value as state
@@ -23,6 +25,11 @@ public class SpaceEaterInput : MonoBehaviour
     void FixedUpdate()
     {
         var rigidBody = GetComponent<Rigidbody>();
-        rigidBody.AddForce(_direction * _speed, ForceMode.Force);
+        rigidBody.velocity = _direction * _speed;
+
+        var animator = GetComponent<Animator>();
+        var magnitude = rigidBody.velocity.magnitude;
+        animator.SetFloat("Speed", rigidBody.velocity.magnitude);
+        animator.SetBool("Walking", magnitude > 0);
     }
 }
