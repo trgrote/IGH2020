@@ -9,6 +9,8 @@ public class TriggerTractorBeam : MonoBehaviour
     [SerializeField] private AudioSource intenseMusic;
     [SerializeField] private Light secondLight;
     [SerializeField] private GameObject worldObject;
+    private float movementDirection = 0;
+    private int movementSpeed = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +20,7 @@ public class TriggerTractorBeam : MonoBehaviour
     public void RotateWorld(InputAction.CallbackContext context)
     {
         var newMovement = context.ReadValue<Vector2>();
-        worldObject.transform.Rotate(new Vector3(0,0,newMovement.x));
+        movementDirection = newMovement.x;
     }
 
     public void Fire(InputAction.CallbackContext context)
@@ -33,6 +35,6 @@ public class TriggerTractorBeam : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        worldObject.transform.Rotate(new Vector3(0,0, movementDirection * Time.deltaTime * movementSpeed));
     }
 }
