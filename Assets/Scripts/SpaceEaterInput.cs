@@ -20,11 +20,9 @@ public class SpaceEaterInput : MonoBehaviour
         _direction.z = value.y;
     }
 
-    // In the Update, we apply the direction to the movement continiously
-    // The movement will be zero once input stops
-    public void Update()
+    void FixedUpdate()
     {
-        var controller = GetComponent<CharacterController>();
-        controller.Move(_direction * Time.deltaTime * _speed);
+        var rigidBody = GetComponent<Rigidbody>();
+        rigidBody.AddForce(_direction * _speed, ForceMode.Force);
     }
 }
