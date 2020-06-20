@@ -452,6 +452,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 138277323}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &166066066 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8484541112851431661, guid: 5579c9bab7941ca4ab4716a34ffc02ef,
+    type: 3}
+  m_PrefabInstance: {fileID: 1548424276}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &198241395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1318,7 @@ GameObject:
   - component: {fileID: 838611128}
   - component: {fileID: 838611127}
   - component: {fileID: 838611126}
+  - component: {fileID: 838611129}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1352,10 +1359,10 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 47
+  field of view: 57
   orthographic: 0
   orthographic size: 5
-  m_Depth: -1
+  m_Depth: 0.58
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -1377,13 +1384,32 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 838611125}
-  m_LocalRotation: {x: 0.35764307, y: -0, z: -0, w: 0.93385834}
-  m_LocalPosition: {x: 6.56, y: 11.69, z: -11.57}
+  m_LocalRotation: {x: 0.23622502, y: 0.648994, z: -0.2228309, w: 0.688005}
+  m_LocalPosition: {x: -3.13, y: 9.56, z: -0.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 41.911003, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 54.185, y: 90.00001, z: 0}
+--- !u!1183024399 &838611129
+LookAtConstraint:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 838611125}
+  m_Enabled: 1
+  m_Weight: 1
+  m_RotationAtRest: {x: 0, y: 0, z: 0}
+  m_RotationOffset: {x: 0, y: 0, z: 0}
+  m_Roll: 0
+  m_WorldUpObject: {fileID: 0}
+  m_UseUpObject: 0
+  m_IsContraintActive: 1
+  m_IsLocked: 1
+  m_Sources:
+  - sourceTransform: {fileID: 166066066}
+    weight: 1
 --- !u!1 &903224077
 GameObject:
   m_ObjectHideFlags: 0
@@ -2347,7 +2373,7 @@ PrefabInstance:
     - target: {fileID: 8484541112851431661, guid: 5579c9bab7941ca4ab4716a34ffc02ef,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -0.32
       objectReference: {fileID: 0}
     - target: {fileID: 8484541112851431661, guid: 5579c9bab7941ca4ab4716a34ffc02ef,
         type: 3}
