@@ -310,7 +310,7 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 61670a7cf153441afb3b151121ab7182,
         type: 3}
       propertyPath: m_Name
-      value: SpaceEater@Scary Clown Walk
+      value: SpaceEater
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 61670a7cf153441afb3b151121ab7182,
         type: 3}
@@ -586,9 +586,11 @@ Animation:
   m_GameObject: {fileID: 670045658}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: -203655887218126122, guid: 61670a7cf153441afb3b151121ab7182,
+  m_Animation: {fileID: -203655887218126122, guid: 9ded8948b982544c99d4722282a57fb4,
     type: 3}
-  m_Animations: []
+  m_Animations:
+  - {fileID: 7400000, guid: 621ee2f79b77947b293a2031c2646211, type: 2}
+  - {fileID: 7400000, guid: 2e7c83a9d6448473eada95602a3b567b, type: 2}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 1
