@@ -20,13 +20,14 @@ public class SpaceEaterInput : MonoBehaviour
 
         _direction.x = value.x;
         _direction.y = 0;
-        _direction.z = value.y;
+        _direction.z = -value.y;
     }
 
     void FixedUpdate()
     {
         var rigidBody = GetComponent<Rigidbody>();
-        rigidBody.velocity = _direction * _speed;
+        var relativeDirection = Camera.main.worldToCameraMatrix * _direction;
+        rigidBody.velocity = relativeDirection.normalized * _speed;
 
         // Only Modify Rotation is the direction isn't zero, because that means they just stopped input.
         // We don't want to snap back to looking down the Z axis
