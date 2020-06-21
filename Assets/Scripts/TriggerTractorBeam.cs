@@ -33,8 +33,8 @@ public class TriggerTractorBeam : MonoBehaviour
     {
         var newVal = context.ReadValue<float>();
 
-        calmMusic.volume = newVal == 1 ? 0 : 1;
-        intenseMusic.volume = newVal;
+        calmMusic.volume = newVal == 1 ? 0 : 0.25f;
+        intenseMusic.volume = newVal == 1 ? 0.25f : 0;
         secondLight.intensity = newVal == 1 ? 2 : 0.75f;
         if (newVal == 1) { beam.Play(); } else { beam.Stop(); }
         beamRange.enabled = newVal == 1;

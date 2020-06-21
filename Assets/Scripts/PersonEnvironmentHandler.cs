@@ -6,6 +6,7 @@ public class PersonEnvironmentHandler : MonoBehaviour
 {
     [SerializeField] private GameObject homeWorld;
     [SerializeField] private GameObject monsterMan;
+    [SerializeField] private List<AudioClip> screams;
     private Vector3 gravityPosition;
     private float accel = 9.0f;
     private Rigidbody rigid;
@@ -28,6 +29,8 @@ public class PersonEnvironmentHandler : MonoBehaviour
     {
         gravityPosition = monsterMan.transform.position;
         accel = 18;
+        GetComponent<AudioSource>().clip = screams[Random.Range(0, 3)];
+        GetComponent<AudioSource>().Play();
         Debug.Log("ENTER");
     }
 
