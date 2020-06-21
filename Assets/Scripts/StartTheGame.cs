@@ -9,6 +9,7 @@ public class StartTheGame : MonoBehaviour
     [SerializeField] private GameObject homeWorld;
     [SerializeField] private PlanetState planetState;
     [SerializeField] private GameObject BabbyMan;
+    [SerializeField] private GameObject triggerManager;
     [SerializeField, rho.Scene] private string mySceneName;
 
     // Awake gets called before scene becomes active
@@ -51,6 +52,7 @@ public class StartTheGame : MonoBehaviour
             homey.transform.Rotate(0,180f,currentDegree);
             homey.GetComponent<PersonEnvironmentHandler>().homeWorld = homeWorld;
             homey.GetComponent<PersonEnvironmentHandler>().monsterMan = gravityPoint;
+            homey.GetComponent<PersonEnvironmentHandler>().triggerManager = triggerManager;
             currentDegree += degree;
         }
     }
