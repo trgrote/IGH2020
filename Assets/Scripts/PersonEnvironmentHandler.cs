@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PersonEnvironmentHandler : MonoBehaviour
 {
-    [SerializeField] private GameObject homeWorld;
-    [SerializeField] private GameObject monsterMan;
+    [SerializeField] public GameObject homeWorld;
+    [SerializeField] public GameObject monsterMan;
     [SerializeField] private List<AudioClip> screams;
     private Vector3 gravityPosition;
     private float accel = 9.0f;
