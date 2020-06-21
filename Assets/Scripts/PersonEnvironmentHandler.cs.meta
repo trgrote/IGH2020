@@ -3,7 +3,11 @@ guid: c5c6eada6736b814196d68cb13963f84
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - homeWorld: {instanceID: 0}
+  - monsterMan: {instanceID: 0}
+  - triggerManager: {instanceID: 0}
+  - _playerScore: {fileID: 11400000, guid: 30896801ba037c54a9d2f28caa1f0508, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

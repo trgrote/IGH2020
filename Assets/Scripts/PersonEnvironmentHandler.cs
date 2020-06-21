@@ -8,6 +8,7 @@ public class PersonEnvironmentHandler : MonoBehaviour
     [SerializeField] public GameObject monsterMan;
     [SerializeField] private List<AudioClip> screams;
     [SerializeField] public GameObject triggerManager;
+    [SerializeField] private PlayerScoreObject _playerScore;
     private Vector3 gravityPosition;
     private float accel = 6.0f;
     private Rigidbody rigid;
@@ -65,6 +66,7 @@ public class PersonEnvironmentHandler : MonoBehaviour
         currentAnimation = "Run";
         if (coll.tag == "Gulp")
         {
+            ++_playerScore._score;
             Destroy(gameObject);
         }
     }
