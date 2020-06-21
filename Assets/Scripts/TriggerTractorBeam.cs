@@ -13,7 +13,7 @@ public class TriggerTractorBeam : MonoBehaviour
     private ParticleSystem beam;
     private CapsuleCollider beamRange;
     private float movementDirection = 0;
-    private int movementSpeed = 10;
+    private int movementSpeed = 20;
     public bool isSucking = false;
     // Start is called before the first frame update
     void Start()
