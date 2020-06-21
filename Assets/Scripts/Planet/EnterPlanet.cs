@@ -14,6 +14,8 @@ public class EnterPlanet : MonoBehaviour
         _intersectingPlanets.Where((_) => !context.canceled).Take(1).ToList().ForEach(p => {
             p.Enter();
         });
+
+        _intersectingPlanets.Clear();
     }
 
     List<PlanetInfo> _intersectingPlanets = new List<PlanetInfo>();
