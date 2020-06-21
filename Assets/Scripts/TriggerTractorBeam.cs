@@ -32,12 +32,13 @@ public class TriggerTractorBeam : MonoBehaviour
 
     public void Fire(InputAction.CallbackContext context)
     {
-        if (context.canceled)
+        isSucking = context.ReadValue<float>() == 1;
+        
+        if (!calmMusic)
         {
             return;
         }
-        isSucking = context.ReadValue<float>() == 1;
-        
+
         calmMusic.volume = isSucking ? 0 : 0.25f;
         intenseMusic.volume = isSucking ? 0.25f : 0;
         secondLight.intensity = isSucking ? 2 : 0.75f;
