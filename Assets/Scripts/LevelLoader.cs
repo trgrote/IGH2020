@@ -10,7 +10,7 @@ public class LevelLoader : MonoBehaviour
 
     [SerializeField] so_events.Event _onUnloadCompleteEvent;
 
-    LoadSceneParameters _loadParams = new LoadSceneParameters(LoadSceneMode.Additive, LocalPhysicsMode.Physics3D);
+    LoadSceneParameters _loadParams = new LoadSceneParameters(LoadSceneMode.Additive, LocalPhysicsMode.None);
 
     Scene _worldScene;
     bool _worldSceneLoaded = false;
