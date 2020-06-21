@@ -5,15 +5,19 @@ using UnityEngine;
 public class PersonEnvironmentHandler : MonoBehaviour
 {
     [SerializeField] private GameObject homeWorld;
+    private float accel = 3.0f;
+    private Rigidbody rigidbody;
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Animator>().Play("Run");
+        rigidbody = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Animator>().SetBool("Run", true);
+        GetComponent<Animator>().Play("Run");
+        rigidbody.AddForce((homeWorld.transform.position - transform.position).normalized * accel);
+        transform.rotation = new Quaternion(0,0.25f,0,0);
     }
 }

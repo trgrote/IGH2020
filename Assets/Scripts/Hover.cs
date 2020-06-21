@@ -9,12 +9,12 @@ public class Hover : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        pos = this.transform.position;
+        pos = this.transform.localPosition;
     }
 
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(pos.x, pos.y + (Mathf.Sin(Time.time) * maxVariance), pos.z);
+        transform.localPosition = new Vector3(pos.x, pos.y + (Mathf.Sin(Time.time) * maxVariance), pos.z);
     }
 }
