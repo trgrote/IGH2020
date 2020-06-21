@@ -10,7 +10,7 @@ public class TriggerTractorBeam : MonoBehaviour
     [SerializeField] private Light secondLight;
     [SerializeField] private GameObject worldObject;
     private float movementDirection = 0;
-    private int movementSpeed = 3;
+    private int movementSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
