@@ -47,6 +47,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _galaxyRootObject: {fileID: 0}
   _worldSceneName: WorldObservationScene
+  _onUnloadCompleteEvent: {fileID: 11400000, guid: 7495189aad5c4a541963d29b324f599b,
+    type: 2}
 --- !u!114 &7419276117710058838
 MonoBehaviour:
   m_ObjectHideFlags: 0

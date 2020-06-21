@@ -8,6 +8,8 @@ public class LevelLoader : MonoBehaviour
     [SerializeField] GameObject _galaxyRootObject;
     [SerializeField, rho.Scene] string _worldSceneName;
 
+    [SerializeField] so_events.Event _onUnloadCompleteEvent;
+
     LoadSceneParameters _loadParams = new LoadSceneParameters(LoadSceneMode.Additive, LocalPhysicsMode.Physics3D);
 
     Scene _worldScene;
@@ -48,5 +50,6 @@ public class LevelLoader : MonoBehaviour
         }
         _galaxyRootObject.SetActive(true);
         _worldSceneLoaded = false;
+        _onUnloadCompleteEvent.Raise();
     }
 }
