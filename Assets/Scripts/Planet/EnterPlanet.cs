@@ -25,7 +25,7 @@ public class EnterPlanet : MonoBehaviour
         if (_planets.Contains(other.gameObject))
         {
             var planetInfo = other.GetComponent<PlanetInfo>();
-            if (planetInfo)
+            if (planetInfo && planetInfo.CanEnter())
             {
                 _intersectingPlanets.Add(planetInfo);
             }
