@@ -14,10 +14,11 @@ public class LevelLoader : MonoBehaviour
 
     Scene _worldScene;
     bool _worldSceneLoaded = false;
+    bool _processing = false;
 
     public void LoadWorldScene()
     {
-        if (!_worldSceneLoaded)
+        if (!_processing && !_worldSceneLoaded)
         {
             StartCoroutine(LoadWorldSceneCoroutine());
         }
@@ -25,7 +26,7 @@ public class LevelLoader : MonoBehaviour
 
     public void UnloadWorldScene()
     {
-        if (_worldSceneLoaded)
+        if (!_processing && _worldSceneLoaded)
         {
             StartCoroutine(UnloadWorldSceneCoroutine());
         }
@@ -33,17 +34,19 @@ public class LevelLoader : MonoBehaviour
 
     IEnumerator LoadWorldSceneCoroutine()
     {
+        _processing = true;
         _galaxyRootObject.SetActive(false);
         _worldScene = SceneManager.LoadScene(_worldSceneName, _loadParams);
         yield return null;    // wait a frame before settint active scene
         SceneManager.SetActiveScene(_worldScene);
         _worldSceneLoaded = true;
+        _processing = false;
     }
 
     IEnumerator UnloadWorldSceneCoroutine()
     {
+        _processing = true;
         var unloadProc = SceneManager.UnloadSceneAsync(_worldScene, UnloadSceneOptions.UnloadAllEmbeddedSceneObjects);
-
         while (!unloadProc.isDone)
         {
             yield return null;
@@ -51,5 +54,6 @@ public class LevelLoader : MonoBehaviour
         _galaxyRootObject.SetActive(true);
         _worldSceneLoaded = false;
         _onUnloadCompleteEvent.Raise();
+        _processing = false;
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -8,6 +9,7 @@ namespace so_events
     public class Event : ScriptableObject
     {
         List<EventListener> _listeners = new List<EventListener>();
+        public event Action Raised = delegate {};
 
         public void Raise()
         {
@@ -15,6 +17,7 @@ namespace so_events
             {
                 _listeners[i].OnEventRaised();
             }
+            Raised();
         }
 
         public void Register(EventListener listener)

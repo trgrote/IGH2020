@@ -1403,6 +1403,7 @@ GameObject:
   - component: {fileID: 2948296917584674563}
   - component: {fileID: 3449599315381860264}
   - component: {fileID: 1491004749}
+  - component: {fileID: 2134327661200463585}
   m_Layer: 0
   m_Name: SpaceEater
   m_TagString: Player
@@ -1521,7 +1522,18 @@ MonoBehaviour:
     m_ActionId: 0a3a6669-eb41-4b1f-8a40-52806380b989
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2134327661200463585}
+        m_MethodName: EnterCurrentPlanet
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: cda32f78-bdde-480f-b824-2e1431e506b9
     m_ActionName: Player/Fire[/Mouse/leftButton,/Keyboard/space]
   - m_PersistentCalls:
@@ -1608,3 +1620,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _runtimeSet: {fileID: 11400000, guid: c6c4e98d82fa9454eb4146ed45ef98ba, type: 2}
+--- !u!114 &2134327661200463585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9148206797537237591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1858a3b409857654681a604bda19102e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _planets: {fileID: 11400000, guid: 6b96b6b19fe3d1843a02ee1fb17f0075, type: 2}

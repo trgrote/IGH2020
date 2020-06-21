@@ -1,15 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class EnterPlanet : MonoBehaviour
 {
-    [SerializeField] so_events.Event _loadWorldSceneEvent;
+    [SerializeField] rho.RuntimeGameObjectSet _planets;
 
-    public void Enter(PlanetInfo planetInfo, PlanetState planetState)
+    public void EnterCurrentPlanet(InputAction.CallbackContext context)
     {
-        // Load PlanetInfo into planet state
-        planetInfo.LoadState(planetState);
-        _loadWorldSceneEvent.Raise();
+        // If this input is on up, then grab the first intersecting planet and enter it
+        _intersectingPlanets.Where((_) => !context.canceled).Take(1).ToList().ForEach(p => {
+            p.Enter();
+        });
+    }
+
+    List<PlanetInfo> _intersectingPlanets = new List<PlanetInfo>();
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (_planets.Contains(other.gameObject))
+        {
+            var planetInfo = other.GetComponent<PlanetInfo>();
+            if (planetInfo)
+            {
+                _intersectingPlanets.Add(planetInfo);
+            }
+        }
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (_planets.Contains(other.gameObject))
+        {
+            var planetInfo = other.GetComponent<PlanetInfo>();
+            if (planetInfo)
+            {
+                _intersectingPlanets.Remove(planetInfo);
+            }
+        }
     }
 }
