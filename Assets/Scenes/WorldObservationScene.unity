@@ -10476,6 +10476,7 @@ MonoBehaviour:
   BabbyMan: {fileID: 7546700552194939557, guid: 4266a89f3e6821b4abe3b6a4f3bd8131,
     type: 3}
   triggerManager: {fileID: 145108899}
+  unloadEvent: {fileID: 11400000, guid: c6838ffe8363ece4793c9970a6c66e64, type: 2}
   mySceneName: WorldObservationScene
 --- !u!1001 &1755064517
 PrefabInstance:

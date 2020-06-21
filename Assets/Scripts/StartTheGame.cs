@@ -10,6 +10,7 @@ public class StartTheGame : MonoBehaviour
     [SerializeField] private PlanetState planetState;
     [SerializeField] private GameObject BabbyMan;
     [SerializeField] private GameObject triggerManager;
+    [SerializeField] private so_events.Event unloadEvent;
     [SerializeField, rho.Scene] private string mySceneName;
 
     // Awake gets called before scene becomes active
@@ -60,6 +61,9 @@ public class StartTheGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (planetState.RemainingPeople <= 0)
+        {
+            unloadEvent.Raise();
+        }
     }
 }
