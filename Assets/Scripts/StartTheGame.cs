@@ -20,8 +20,8 @@ public class StartTheGame : MonoBehaviour
 
         while(currentDegree < 360)
         {
-            var newX = Mathf.Sin(Mathf.Deg2Rad * currentDegree) * 11;
-            var newY = Mathf.Cos(Mathf.Deg2Rad * currentDegree) * 11;
+            var newX = Mathf.Sin(Mathf.Deg2Rad * currentDegree) * 10;
+            var newY = Mathf.Cos(Mathf.Deg2Rad * currentDegree) * 10;
             var homey = Instantiate(BabbyMan);
             var curPos = gameObject.transform.position;
             homey.transform.position = new Vector3(curPos.x + newX, curPos.y + newY, curPos.z);
