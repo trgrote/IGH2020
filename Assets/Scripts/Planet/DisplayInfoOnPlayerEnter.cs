@@ -11,10 +11,18 @@ public class DisplayInfoOnPlayerEnter : MonoBehaviour
 
     [SerializeField] rho.RuntimeGameObjectSet _players;
 
+    [SerializeField] PlanetInfo _planetInfo;
+
     void Start()
     {
         _lookAtConstraint.enabled = false;
         _text.enabled = false;
+    }
+
+    void Update()
+    {
+        // Set Text based off population
+        _text.text = $"Pop. {_planetInfo._population}\nPress Space";
     }
 
     void OnTriggerEnter(Collider other)

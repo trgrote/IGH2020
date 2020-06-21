@@ -309,7 +309,7 @@ LensFlare:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 133601353}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Flare: {fileID: 12100000, guid: e5c64bbacdf244d0183c0099176cefc3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Brightness: 1
@@ -362,7 +362,7 @@ LensFlare:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 558929232}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Flare: {fileID: 12100000, guid: e5c64bbacdf244d0183c0099176cefc3, type: 2}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_Brightness: 1
@@ -573,7 +573,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1110248231}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
@@ -822,6 +822,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2080038118}
     m_Modifications:
+    - target: {fileID: 1796600062489680138, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: _population
+      value: 50
+      objectReference: {fileID: 0}
     - target: {fileID: 5596535733702593986, guid: 1be6bec8771145d43b81edccb0ed1624,
         type: 3}
       propertyPath: m_Name
