@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StartTheGame : MonoBehaviour
 {
@@ -8,8 +9,30 @@ public class StartTheGame : MonoBehaviour
     [SerializeField] private GameObject homeWorld;
     [SerializeField] private PlanetState planetState;
     [SerializeField] private GameObject BabbyMan;
+    [SerializeField, rho.Scene] private string mySceneName;
+
+    // Awake gets called before scene becomes active
+    void OnEnable()
+    {
+        SceneManager.activeSceneChanged += OnActiveSceneChange;
+    }
+
+    void OnDisable()
+    {
+        SceneManager.activeSceneChanged -= OnActiveSceneChange;
+    }
+
+    void OnActiveSceneChange(Scene current, Scene next)
+    {
+        // Only Spawn everything if my scene has just become the active scene
+        if (next.name == mySceneName)
+        {
+            Spawn();
+        }
+    }
+
     // Start is called before the first frame update
-    void Start()
+    void Spawn()
     {
         var spawnPosition = GetComponentInChildren<Transform>();
         var startingPop = planetState.RemainingPeople;

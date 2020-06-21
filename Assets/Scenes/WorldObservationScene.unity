@@ -10470,6 +10470,7 @@ MonoBehaviour:
   planetState: {fileID: 11400000, guid: fc735ae028609f54bb97862905884a3d, type: 2}
   BabbyMan: {fileID: 7546700552194939557, guid: 4266a89f3e6821b4abe3b6a4f3bd8131,
     type: 3}
+  mySceneName: WorldObservationScene
 --- !u!1001 &1755064517
 PrefabInstance:
   m_ObjectHideFlags: 0
