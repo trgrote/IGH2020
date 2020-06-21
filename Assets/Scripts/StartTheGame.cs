@@ -36,6 +36,11 @@ public class StartTheGame : MonoBehaviour
     // Start is called before the first frame update
     void Spawn()
     {
+        if (planetState.RemainingPeople < 1)
+        {
+            return;
+        }
+        
         var spawnPosition = GetComponentInChildren<Transform>();
         var startingPop = planetState.RemainingPeople;
 
