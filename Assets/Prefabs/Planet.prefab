@@ -238,6 +238,7 @@ GameObject:
   - component: {fileID: 3866634703672852297}
   - component: {fileID: 1957345047809750515}
   - component: {fileID: 318216114479769408}
+  - component: {fileID: 7391351035718045252}
   m_Layer: 0
   m_Name: InteractionTrigger
   m_TagString: Untagged
@@ -288,6 +289,19 @@ MonoBehaviour:
   _lookAtConstraint: {fileID: 3526059036938587895}
   _players: {fileID: 11400000, guid: c6c4e98d82fa9454eb4146ed45ef98ba, type: 2}
   _planetInfo: {fileID: 1796600062489680138}
+--- !u!114 &7391351035718045252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5440505678678903319}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98f672073f580814c8361e062782ec1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _runtimeSet: {fileID: 11400000, guid: 6b96b6b19fe3d1843a02ee1fb17f0075, type: 2}
 --- !u!1 &5596535733702593986
 GameObject:
   m_ObjectHideFlags: 0
