@@ -1522,18 +1522,7 @@ MonoBehaviour:
     m_ActionId: 0a3a6669-eb41-4b1f-8a40-52806380b989
     m_ActionName: Player/Look[/Mouse/delta]
   - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2134327661200463585}
-        m_MethodName: EnterCurrentPlanet
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
     m_ActionId: cda32f78-bdde-480f-b824-2e1431e506b9
     m_ActionName: Player/Fire[/Mouse/leftButton,/Keyboard/space]
   - m_PersistentCalls:
@@ -1576,6 +1565,21 @@ MonoBehaviour:
       m_Calls: []
     m_ActionId: fe9a2c7e-15e6-4ed7-b309-1d293af14d2d
     m_ActionName: UI/TrackedDeviceOrientation
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2134327661200463585}
+        m_MethodName: EnterCurrentPlanet
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 99025b78-e6bd-43d4-ab90-5c3e8172ee1a
+    m_ActionName: Player/Enter/Exit[/Keyboard/e]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Keyboard&Mouse
   m_DefaultActionMap: Player

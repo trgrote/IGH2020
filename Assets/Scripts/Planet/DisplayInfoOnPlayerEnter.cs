@@ -22,7 +22,7 @@ public class DisplayInfoOnPlayerEnter : MonoBehaviour
     void Update()
     {
         // Set Text based off population
-        _text.text = $"Pop. {_planetInfo._population}\nPress Space";
+        _text.text = $"Pop. {_planetInfo._population}\nPress E";
     }
 
     void OnTriggerEnter(Collider other)
