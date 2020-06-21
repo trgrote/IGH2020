@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &6737336336749775741
+--- !u!1001 &4988987590151310015
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -15,7 +15,7 @@ PrefabInstance:
     - target: {fileID: 5596535733702593986, guid: 1be6bec8771145d43b81edccb0ed1624,
         type: 3}
       propertyPath: m_Name
-      value: Planet1
+      value: Planet9
       objectReference: {fileID: 0}
     - target: {fileID: 5596535733702593987, guid: 1be6bec8771145d43b81edccb0ed1624,
         type: 3}
@@ -23,15 +23,25 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 13400000, guid: 61c7d50bbf24a4b30b7ff7fa168517f5,
         type: 2}
+    - target: {fileID: 5596535733702593988, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: m_Mass
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 5596535733702593989, guid: 1be6bec8771145d43b81edccb0ed1624,
         type: 3}
       propertyPath: _origin
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5596535733702593989, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: _speed
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 5596535733702593990, guid: 1be6bec8771145d43b81edccb0ed1624,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -33.186146
+      value: -45.806145
       objectReference: {fileID: 0}
     - target: {fileID: 5596535733702593990, guid: 1be6bec8771145d43b81edccb0ed1624,
         type: 3}
@@ -82,6 +92,41 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596535733702593990, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596535733702593990, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5596535733702593990, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825607897654381335, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.6883843
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825607897654381335, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.27058828
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825607897654381335, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: m_Color.a
+      value: 0.6039216
+      objectReference: {fileID: 0}
+    - target: {fileID: 8825607897654381335, guid: 1be6bec8771145d43b81edccb0ed1624,
+        type: 3}
+      propertyPath: m_Range
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1be6bec8771145d43b81edccb0ed1624, type: 3}
