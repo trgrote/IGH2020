@@ -11,6 +11,12 @@ public class DisplayInfoOnPlayerEnter : MonoBehaviour
 
     [SerializeField] rho.RuntimeGameObjectSet _players;
 
+    void Start()
+    {
+        _lookAtConstraint.enabled = false;
+        _text.enabled = false;
+    }
+
     void OnTriggerEnter(Collider other)
     {
         // If the Player Enters, grab the main camera, then turn on the billboard
