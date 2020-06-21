@@ -34,7 +34,7 @@ public class PersonEnvironmentHandler : MonoBehaviour
         animationRig.Play(currentAnimation);
         if (dying) { rigid.AddForce((gravityPosition - transform.position).normalized * accel); }
         else { rigid.velocity = Vector3.zero; }
-        transform.rotation = new Quaternion(0,0.25f,0,0);
+        //transform.rotation = new Quaternion(0,0.25f,0,0);
         transform.position = new Vector3(transform.position.x, transform.position.y, dying ? transform.position.z : initialZ);
     }
 

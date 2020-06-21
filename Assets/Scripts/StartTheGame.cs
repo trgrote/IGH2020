@@ -25,6 +25,7 @@ public class StartTheGame : MonoBehaviour
             var homey = Instantiate(BabbyMan);
             var curPos = gameObject.transform.position;
             homey.transform.position = new Vector3(curPos.x + newX, curPos.y + newY, curPos.z);
+            homey.transform.Rotate(0,180f,currentDegree);
             homey.GetComponent<PersonEnvironmentHandler>().homeWorld = homeWorld;
             homey.GetComponent<PersonEnvironmentHandler>().monsterMan = gravityPoint;
             currentDegree += degree;
