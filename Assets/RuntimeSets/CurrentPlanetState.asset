@@ -12,4 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2927d647d5d2274b92cbd1a5147c443, type: 3}
   m_Name: CurrentPlanetState
   m_EditorClassIdentifier: 
-  RemainingPeople: 50
+  RemainingPeople: 46
+  MusicGroup: 0
+  RemainingTime: 30
