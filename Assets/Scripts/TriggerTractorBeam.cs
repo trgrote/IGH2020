@@ -9,12 +9,13 @@ public class TriggerTractorBeam : MonoBehaviour
     [SerializeField] private AudioSource intenseMusic;
     [SerializeField] private Light secondLight;
     [SerializeField] private GameObject worldObject;
+    [SerializeField] private ParticleSystem beam;
     private float movementDirection = 0;
     private int movementSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
-        
+        beam.Stop();
     }
 
     public void RotateWorld(InputAction.CallbackContext context)
@@ -30,6 +31,7 @@ public class TriggerTractorBeam : MonoBehaviour
         calmMusic.volume = newVal == 1 ? 0 : 1;
         intenseMusic.volume = newVal;
         secondLight.intensity = newVal == 1 ? 2 : 0.75f;
+        if (newVal == 1) { beam.Play(); } else { beam.Stop(); }
     }
 
     // Update is called once per frame
