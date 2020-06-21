@@ -165,6 +165,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: c14e2dba2cfd947d98499e522c611582, type: 3}
   triggerManager: {fileID: 0}
   _playerScore: {fileID: 11400000, guid: 30896801ba037c54a9d2f28caa1f0508, type: 2}
+  _planetState: {fileID: 11400000, guid: fc735ae028609f54bb97862905884a3d, type: 2}
 --- !u!54 &7546700552194939552
 Rigidbody:
   m_ObjectHideFlags: 0

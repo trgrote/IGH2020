@@ -8,6 +8,7 @@ MonoImporter:
   - monsterMan: {instanceID: 0}
   - triggerManager: {instanceID: 0}
   - _playerScore: {fileID: 11400000, guid: 30896801ba037c54a9d2f28caa1f0508, type: 2}
+  - _planetState: {fileID: 11400000, guid: fc735ae028609f54bb97862905884a3d, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

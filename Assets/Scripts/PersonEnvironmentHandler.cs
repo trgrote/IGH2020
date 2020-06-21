@@ -9,6 +9,7 @@ public class PersonEnvironmentHandler : MonoBehaviour
     [SerializeField] private List<AudioClip> screams;
     [SerializeField] public GameObject triggerManager;
     [SerializeField] private PlayerScoreObject _playerScore;
+    [SerializeField] private PlanetState _planetState;
     private Vector3 gravityPosition;
     private float accel = 6.0f;
     private Rigidbody rigid;
@@ -67,6 +68,7 @@ public class PersonEnvironmentHandler : MonoBehaviour
         if (coll.tag == "Gulp")
         {
             ++_playerScore._score;
+            --_planetState.RemainingPeople;
             Destroy(gameObject);
         }
     }
