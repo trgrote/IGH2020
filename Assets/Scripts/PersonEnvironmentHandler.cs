@@ -10,18 +10,20 @@ public class PersonEnvironmentHandler : MonoBehaviour
     private Vector3 gravityPosition;
     private float accel = 9.0f;
     private Rigidbody rigid;
+    private Animator animationRig;
     private string currentAnimation = "Bored";
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
+        animationRig = GetComponentInChildren<Animator>();
         gravityPosition = homeWorld.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
-        GetComponent<Animator>().Play(currentAnimation);
+        animationRig.Play(currentAnimation);
         rigid.AddForce((gravityPosition - transform.position).normalized * accel);
         transform.rotation = new Quaternion(0,0.25f,0,0);
     }
@@ -35,13 +37,7 @@ public class PersonEnvironmentHandler : MonoBehaviour
         currentAnimation = "Run";
         if (coll.tag == "Gulp")
         {
-            Debug.Log("BOINK");
             Destroy(gameObject);
         }
-    }
-
-    void OnTriggerExit(Collider coll)
-    {
-        Debug.Log("EXIT");
     }
 }
