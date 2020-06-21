@@ -7,4 +7,5 @@ public class PlanetState : ScriptableObject
 {
     public int RemainingPeople = 0;
     public int MusicGroup = 0;
+    public float RemainingTime = 30f;
 }
