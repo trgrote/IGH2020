@@ -5,19 +5,34 @@ using UnityEngine;
 public class PersonEnvironmentHandler : MonoBehaviour
 {
     [SerializeField] private GameObject homeWorld;
-    private float accel = 3.0f;
+    [SerializeField] private GameObject monsterMan;
+    private Vector3 gravityPosition;
+    private float accel = 9.0f;
     private Rigidbody rigid;
     // Start is called before the first frame update
     void Start()
     {
         rigid = GetComponent<Rigidbody>();
+        gravityPosition = homeWorld.transform.position;
     }
 
     // Update is called once per frame
     void Update()
     {
         GetComponent<Animator>().Play("Run");
-        rigid.AddForce((homeWorld.transform.position - transform.position).normalized * accel);
+        rigid.AddForce((gravityPosition - transform.position).normalized * accel);
         transform.rotation = new Quaternion(0,0.25f,0,0);
+    }
+
+    void OnTriggerEnter(Collider coll)
+    {
+        gravityPosition = monsterMan.transform.position;
+        accel = 18;
+        Debug.Log("ENTER");
+    }
+
+    void OnTriggerExit(Collider coll)
+    {
+        Debug.Log("EXIT");
     }
 }

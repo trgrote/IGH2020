@@ -9,13 +9,18 @@ public class TriggerTractorBeam : MonoBehaviour
     [SerializeField] private AudioSource intenseMusic;
     [SerializeField] private Light secondLight;
     [SerializeField] private GameObject worldObject;
-    [SerializeField] private ParticleSystem beam;
+    [SerializeField] private GameObject monsterObject;
+    private ParticleSystem beam;
+    private CapsuleCollider beamRange;
     private float movementDirection = 0;
     private int movementSpeed = 10;
     // Start is called before the first frame update
     void Start()
     {
+        beam = monsterObject.GetComponentInChildren<ParticleSystem>();
         beam.Stop();
+        beamRange = monsterObject.GetComponent<CapsuleCollider>();
+        beamRange.enabled = false;
     }
 
     public void RotateWorld(InputAction.CallbackContext context)
@@ -32,6 +37,7 @@ public class TriggerTractorBeam : MonoBehaviour
         intenseMusic.volume = newVal;
         secondLight.intensity = newVal == 1 ? 2 : 0.75f;
         if (newVal == 1) { beam.Play(); } else { beam.Stop(); }
+        beamRange.enabled = newVal == 1;
     }
 
     // Update is called once per frame
