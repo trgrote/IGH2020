@@ -6,4 +6,5 @@ using UnityEngine;
 public class PlanetState : ScriptableObject
 {
     public int RemainingPeople = 0;
+    public int MusicGroup = 0;
 }
